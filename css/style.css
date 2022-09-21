@@ -10,3 +10,29 @@
     padding-top: 40px;
     padding-left: 84px;
 }
+
+.insertText{
+    /* Haciendo transparente el formate del cuadro de input */
+    background: transparent;
+    border: none;
+    outline: none;
+
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+::placeholder{
+    /*Cambiando el color del placeholder para que sea igual
+    al del texto ingresado*/
+    color: #0A3871;
+}
