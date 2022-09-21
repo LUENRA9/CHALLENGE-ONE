@@ -4,3 +4,9 @@
     height: 1024px;
     background: #F3F5FC;
 }
+
+.logoA{
+    position: absolute;
+    padding-top: 40px;
+    padding-left: 84px;
+}
