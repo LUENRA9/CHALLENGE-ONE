@@ -12,12 +12,11 @@
         <div class="background">
             <img class="logoA" src="resources/Vector.png">
 
-            <form>
+            <form >
                 <!---<input type="text" id="inputText" placeholder="Ingrese el texto aqui" class="insertText" required >-->
                 <textarea class="insertText" placeholder="Ingrese el texto aqui" id="encriptarTexto" required></textarea>
-                
-                <input type="submit" value="Encriptar" class="encriptar" onmouseup="encriptarF();">
-                <input type="submit" value="Desencriptar" class="desencriptar">
+                <input type="button" value="Encriptar" class="encriptar" onclick="ValidateTextBox()">
+                <input type="submit" value="Desencriptar" class="desencriptar" >
                 
             </form>
             
@@ -43,7 +42,17 @@
     </body>
 </html>
 <script>
+    function ValidateTextBox() {
+        alert("hi");
+        if (document.getElementById("insertText").value. length == 0) {
+            alert("Please enter Name!");
+            return false;
+        }else{
+            alert("else"); 
+        }
+    }
     function encriptarF (){
+        
         document.getElementById("encriptarTexto").style.fontSize = "100px";
         cleanResultBox()
         
@@ -56,4 +65,6 @@
 
      
     }
+
+   
 </script>
