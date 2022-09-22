@@ -93,10 +93,36 @@ textarea::placeholder{
 .desencriptar{
     color: #000000;
     background: #D8DFE8;
+    
     left: 40%;
 }
+.copiar{
+    display: none;
+    transition: 1s;
+    position: absolute;
+    top: 88%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+        
+    width: 60%;
+    height: 67px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
 
-.encriptar:hover,.desencriptar:hover{
+    color: #FFFFFF;
+    
+    background: #0A3871;
+    border-radius: 24px;
+}
+
+.encriptar:hover,.desencriptar:hover,.copiar:hover{
     
     scale: 1.05;
     filter: contrast(120%);
@@ -105,19 +131,16 @@ textarea::placeholder{
 
 .rectangulo{
     position: absolute;
-width: 27%;
-height: 90%;
-right: 5%;
-top: 5%;
-bottom: 5%;
+    width: 27%;
+    height: 90%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
 
-/* White */
+    background: #FFFFFF;
 
-background: #FFFFFF;
-/* shadow */
-
-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
 }
 
 .mujerBuscando{

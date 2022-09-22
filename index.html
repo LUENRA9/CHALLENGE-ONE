@@ -14,16 +14,18 @@
 
             <form>
                 <!---<input type="text" id="inputText" placeholder="Ingrese el texto aqui" class="insertText" required >-->
-                <textarea class="insertText" placeholder="Ingrese el texto aqui" required></textarea>
+                <textarea class="insertText" placeholder="Ingrese el texto aqui" id="encriptarTexto" required></textarea>
                 
-                <input type="submit" value="Encriptar" class="encriptar">
+                <input type="submit" value="Encriptar" class="encriptar" onmouseup="encriptarF();">
                 <input type="submit" value="Desencriptar" class="desencriptar">
+                
             </form>
             
             <div class="rectangulo">
-                <img class="mujerBuscando" src="resources/Muñeco.png">
-                <p class="mensajeDefault">Ningún mensaje fue encontrado</p>
-                <p class="mensajeDefaultDown">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <input id="copy" type="submit" value="Copiar" class="copiar">
+                <img id="imgRect" class="mujerBuscando" src="resources/Muñeco.png">
+                <p id="msg1" class="mensajeDefault">Ningún mensaje fue encontrado</p>
+                <p id="msg2" class="mensajeDefaultDown">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
             
             <div class="warning">
@@ -40,3 +42,18 @@
         
     </body>
 </html>
+<script>
+    function encriptarF (){
+        document.getElementById("encriptarTexto").style.fontSize = "100px";
+        cleanResultBox()
+        
+    }
+    function cleanResultBox(){
+        document.getElementById("imgRect").style="display:none;";
+        document.getElementById("msg1").style="display:none;";
+        document.getElementById("msg2").style="display:none;";
+        document.getElementById("copy").style="display:inline-block;";
+
+     
+    }
+</script>
