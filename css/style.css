@@ -48,7 +48,7 @@ input::placeholder{
 }
 .warning p{
    
-    width: 205px;
+    width: 500px;
     height: 18px;
     /*Alineando texto en medio*/
     display: flex;
@@ -119,4 +119,69 @@ background: #FFFFFF;
 
 box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 border-radius: 32px;
+}
+
+.mujerBuscando{
+    /*Poniendola en medio*/
+    width: 80%;
+    height: auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top: 0;
+    bottom: 50px;
+    margin: auto;
+    
+}
+
+.mensajeDefault{
+position: absolute;
+width: 336px;
+height: 58px;
+bottom: 20%;
+
+
+left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+text-align: center;
+
+
+color: #343A40;
+
+
+
+}
+
+.mensajeDefaultDown{
+position: absolute;
+bottom: calc(20% - 2em);
+left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+    width: 336px;
+height: 48px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+
+text-align: center;
+
+
+
+color: #495057;
+
+
+
 }
