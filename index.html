@@ -11,7 +11,19 @@
     <body>
         <div class="background">
             <img class="logoA" src="resources/Vector.png">
+            
+            <div class="myPopUp" id="popUp">
+                <div class="pop">
+                    <p>INGRESE UN TEXTO PRIMERO</p>
+                    <input value="CERRAR" type="button" class="close" onclick="closePop()">
+                    
+                       
+                </div>
+            </div>
+           
+            
 
+        
             <form >
              
                 <textarea class="insertText" placeholder="Ingrese el texto aqui" id="textToEncrip" required></textarea>
@@ -26,6 +38,8 @@
                 <p id="msg1" class="mensajeDefault">Ningún mensaje fue encontrado</p>
                 <p id="msg2" class="mensajeDefaultDown">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
+
+            
 
            
             <div class="warning">
@@ -46,7 +60,9 @@
     function ValidateTextBox() {
  
         if(document. getElementById("textToEncrip").value.length == 0) {
-            alert("Primero ingrese un Texto");
+            
+            document.getElementById("popUp").style="visibility: visible;";
+            
         }else{
             encriptarF();
             
@@ -57,6 +73,10 @@
         
         cleanResultBox()
         
+    }
+    function closePop(){
+        
+        document.getElementById("popUp").style="visibility: hidden;";
     }
     function cleanResultBox(){
         document.getElementById("imgRect").style="display:none;";
