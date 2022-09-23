@@ -13,8 +13,8 @@
             <img class="logoA" src="resources/Vector.png">
 
             <form >
-                <!---<input type="text" id="inputText" placeholder="Ingrese el texto aqui" class="insertText" required >-->
-                <textarea class="insertText" placeholder="Ingrese el texto aqui" id="encriptarTexto" required></textarea>
+             
+                <textarea class="insertText" placeholder="Ingrese el texto aqui" id="textToEncrip" required></textarea>
                 <input type="button" value="Encriptar" class="encriptar" onclick="ValidateTextBox()">
                 <input type="submit" value="Desencriptar" class="desencriptar" >
                 
@@ -26,7 +26,8 @@
                 <p id="msg1" class="mensajeDefault">Ningún mensaje fue encontrado</p>
                 <p id="msg2" class="mensajeDefaultDown">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            
+
+           
             <div class="warning">
                 <p><img src="resources/bi_exclamation-circle-fill.png">&nbsp&nbspSolo letras minúsculas y sin acentos</p>
             </div>
@@ -43,17 +44,17 @@
 </html>
 <script>
     function ValidateTextBox() {
-        alert("hi");
-        if (document.getElementById("insertText").value. length == 0) {
-            alert("Please enter Name!");
-            return false;
+ 
+        if(document. getElementById("textToEncrip").value.length == 0) {
+            alert("Primero ingrese un Texto");
         }else{
-            alert("else"); 
+            encriptarF();
+            
         }
     }
     function encriptarF (){
         
-        document.getElementById("encriptarTexto").style.fontSize = "100px";
+        
         cleanResultBox()
         
     }
