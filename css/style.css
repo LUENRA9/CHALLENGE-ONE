@@ -231,22 +231,22 @@ textarea::placeholder{
 
 .mensajeDefault{
 position: absolute;
-width: 336px;
-height: 58px;
+width: 90%;
+height: auto;
 bottom: 20%;
 
 
 left:0;
 right:0;
-margin-left:auto;
-margin-right:auto;
+margin: auto;
 
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
-font-size: 24px;
+font-size: 120%;
 line-height: 120%;
 text-align: center;
+
 
 
 color: #343A40;
@@ -257,18 +257,17 @@ color: #343A40;
 
 .mensajeDefaultDown{
 position: absolute;
-bottom: calc(20% - 2em);
+bottom: 14%;
 left:0;
 right:0;
-margin-left:auto;
-margin-right:auto;
-    width: 336px;
-height: 48px;
+margin: auto;
+width: 90%;
+height: auto;
 
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
+font-size: 90%;
 line-height: 150%;
 
 text-align: center;
