@@ -97,7 +97,8 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    
+    font-size: 200%;
     line-height: 150%;
     color: #0A3871;
 }
@@ -150,7 +151,7 @@ textarea::placeholder{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 100%;
     line-height: 19px;
     text-align: center;
 
@@ -275,5 +276,23 @@ text-align: center;
 color: #495057;
 
 
+
+}
+
+.mensajeResponse{
+    
+    position: absolute;
+    width: 90%;
+    height: 60%;
+    left: 12%;
+    top: 10%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    
+    font-size: 200%;
+    line-height: 150%;
+    color: #0A3871;
 
 }

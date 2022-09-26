@@ -40,6 +40,7 @@
             <div class="rectangulo">
                 <input id="copy" type="submit" value="Copiar" class="copiar">
                 <img id="imgRect" class="mujerBuscando" src="resources/Muñeco.png">
+                <p id="msgResponse" class="mensajeResponse"></p>
                 <p id="msg1" class="mensajeDefault">Ningún mensaje fue encontrado</p>
                 <p id="msg2" class="mensajeDefaultDown">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
@@ -66,19 +67,45 @@
 <script>
     function ValidateTextBox() {
  
-        if(document. getElementById("textToEncrip").value.length == 0) {
-            
-            document.getElementById("popUp").style="display:inline-block;";
-            
+        if(document. getElementById("textToEncrip").value.length == 0) {       
+            document.getElementById("popUp").style="display:inline-block;";   
         }else{
             encriptarF();
-            
         }
     }
     function encriptarF (){
+        var textToEncrip=document.getElementById("textToEncrip").value;
+        var textEncripted="";
         
-        
+
+        for(index=0;index<textToEncrip.length;index++){
+            
+            switch(textToEncrip[index]){
+                case 'e':
+                    textEncripted+="enter"
+                    break;
+                case 'i':
+                    textEncripted+="imes"
+                    break;
+                case 'a':
+                    textEncripted+="ai"
+                    break;
+                case 'o':
+                    textEncripted+="ober"
+                    break;
+                case 'u':
+                    textEncripted+="ufat"
+                    break;
+                default:
+                    textEncripted+=textToEncrip[index];
+            }
+
+        }
+        document.getElementById("msgResponse").innerText=textEncripted;
         cleanResultBox()
+        
+        
+
         
     }
     function closePop(){
@@ -86,6 +113,7 @@
         document.getElementById("popUp").style="display:none;";
     }
     function cleanResultBox(){
+        document.getElementById("textToEncrip").value="";
         document.getElementById("imgRect").style="display:none;";
         document.getElementById("msg1").style="display:none;";
         document.getElementById("msg2").style="display:none;";
