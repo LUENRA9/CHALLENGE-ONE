@@ -297,3 +297,55 @@ color: #495057;
     color: #0A3871;
 
 }
+
+@media screen and (max-width:480px){
+    .background{
+        position: fixed;
+    }
+    .rectangulo{
+        width: 80%;
+        height: 20%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 75%;
+        
+    }
+    .rectangulo img{
+        display: none;
+    }
+    .mensajeDefault{
+        top: 35%;
+    }
+    .mensajeDefaultDown{
+        top: 55%;
+    }
+    .warning{
+        top:70%;
+    }
+    .encriptar,.desencriptar{
+        height: 6%;
+        width: 80%;
+        top: 63%;
+        
+    }
+    .desencriptar{
+        top: 55%;
+        left: 12%;
+        
+    }
+    .insertText{
+        width: 80%;
+        height: 45%;
+    }
+    .pop{
+        width: 80%;
+        height:10%; 
+    }
+
+    .copiar{
+        top:73%;
+        height: 20% ;
+    }
+    
+}
