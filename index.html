@@ -30,10 +30,9 @@
 
         
             <form >
-             
                 <textarea class="insertText" placeholder="Ingrese el texto aqui" id="textToEncrip" required></textarea>
-                <input type="button" value="Encriptar" class="encriptar" onclick="ValidateTextBox()">
-                <input type="submit" value="Desencriptar" class="desencriptar" >
+                <input type="button" value="Encriptar" class="encriptar" onclick="ValidateEncrypt()">
+                <input type="button" value="Desencriptar" class="desencriptar" onclick="ValidateDecrypt()">
                 
             </form>
             
@@ -65,19 +64,25 @@
     </body>
 </html>
 <script>
-    function ValidateTextBox() {
+    function ValidateEncrypt() {
  
         if(document. getElementById("textToEncrip").value.length == 0) {       
             document.getElementById("popUp").style="display:inline-block;";   
         }else{
-            encriptarF();
+            encryptF();
         }
     }
-    function encriptarF (){
+    function ValidateDecrypt() {
+ 
+        if(document. getElementById("textToEncrip").value.length == 0) {       
+            document.getElementById("popUp").style="display:inline-block;";   
+        }else{
+            decryptF();
+        }
+    }
+    function encryptF(){
         var textToEncrip=document.getElementById("textToEncrip").value;
         var textEncripted="";
-        
-
         for(index=0;index<textToEncrip.length;index++){
             
             switch(textToEncrip[index]){
@@ -99,15 +104,72 @@
                 default:
                     textEncripted+=textToEncrip[index];
             }
-
         }
         document.getElementById("msgResponse").innerText=textEncripted;
-        cleanResultBox()
-        
-        
-
-        
+        cleanResultBox();
     }
+    function decryptF(){
+        var textToDecrypt=document.getElementById("textToEncrip").value;
+        
+        var textDecrypt="";
+        
+        for(index=0;index<textToDecrypt.length;index++){
+           
+             
+             
+           
+           
+            if(textToDecrypt.includes("enter",index)){
+                if(textToDecrypt[index]=="e"){
+                    textDecrypt+="e";
+                    console.log("final enter: "+textDecrypt);
+                    index+=5;
+                }
+            }
+            if(textToDecrypt.includes("imes",index)){
+                if(textToDecrypt[index]=="i"){
+                    textDecrypt+="i";
+                    console.log("final imes: "+textDecrypt);
+                    index+=4;
+                }
+            }
+            if(textToDecrypt.includes("ai",index)){
+                if(textToDecrypt[index]=="a"){
+                    textDecrypt+="a";
+                    console.log("final ai: "+textDecrypt);
+                    index+=2;
+                    console.log("AI DESPUES: "+textToDecrypt[index])
+                }
+            }
+            if(textToDecrypt.includes("ober",index)){
+                if(textToDecrypt[index]=="o"){
+                    textDecrypt+="o";
+                    console.log("final ober: "+textDecrypt);
+                    index+=4;
+                }
+            }
+            if(textToDecrypt.includes("ufat",index)){
+                if(textToDecrypt[index]=="o"){
+                    console.log(textToDecrypt[index]);
+                    textDecrypt+="u";
+                    console.log("final ufat: "+textDecrypt);
+                    index+=4;
+                }
+            }
+            if(index<=textToDecrypt.length-1){
+            textDecrypt+=textToDecrypt[index];
+
+            console.log("final 1: "+textDecrypt);
+
+            }
+            
+            
+            
+        }
+        document.getElementById("msgResponse").innerText=textDecrypt;
+        cleanResultBox();
+    }
+
     function closePop(){
         
         document.getElementById("popUp").style="display:none;";
