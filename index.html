@@ -37,7 +37,7 @@
             </form>
             
             <div class="rectangulo">
-                <input id="copy" type="submit" value="Copiar" class="copiar">
+                <input id="copyB" type="button" value="Copiar" class="copiar" onclick="copyText()" >
                 <img id="imgRect" class="mujerBuscando" src="resources/Muñeco.png">
                 <p id="msgResponse" class="mensajeResponse"></p>
                 <p id="msg1" class="mensajeDefault">Ningún mensaje fue encontrado</p>
@@ -54,15 +54,11 @@
            
 
         </div>
-
-        
-        
-
-        
-
-        
+ 
     </body>
 </html>
+
+
 <script>
     function ValidateEncrypt() {
  
@@ -115,56 +111,41 @@
         
         for(index=0;index<textToDecrypt.length;index++){
            
-             
-             
-           
-           
             if(textToDecrypt.includes("enter",index)){
                 if(textToDecrypt[index]=="e"){
                     textDecrypt+="e";
-                    console.log("final enter: "+textDecrypt);
                     index+=5;
                 }
             }
             if(textToDecrypt.includes("imes",index)){
                 if(textToDecrypt[index]=="i"){
                     textDecrypt+="i";
-                    console.log("final imes: "+textDecrypt);
                     index+=4;
                 }
             }
             if(textToDecrypt.includes("ai",index)){
                 if(textToDecrypt[index]=="a"){
                     textDecrypt+="a";
-                    console.log("final ai: "+textDecrypt);
                     index+=2;
-                    console.log("AI DESPUES: "+textToDecrypt[index])
                 }
             }
             if(textToDecrypt.includes("ober",index)){
                 if(textToDecrypt[index]=="o"){
                     textDecrypt+="o";
-                    console.log("final ober: "+textDecrypt);
                     index+=4;
                 }
             }
             if(textToDecrypt.includes("ufat",index)){
                 if(textToDecrypt[index]=="o"){
-                    console.log(textToDecrypt[index]);
                     textDecrypt+="u";
-                    console.log("final ufat: "+textDecrypt);
                     index+=4;
                 }
             }
             if(index<=textToDecrypt.length-1){
             textDecrypt+=textToDecrypt[index];
 
-            console.log("final 1: "+textDecrypt);
-
             }
-            
-            
-            
+   
         }
         document.getElementById("msgResponse").innerText=textDecrypt;
         cleanResultBox();
@@ -179,9 +160,20 @@
         document.getElementById("imgRect").style="display:none;";
         document.getElementById("msg1").style="display:none;";
         document.getElementById("msg2").style="display:none;";
-        document.getElementById("copy").style="display:inline-block;";
+        document.getElementById("copyB").value="copiar";
+        document.getElementById("copyB").style="display:inline-block;";
 
      
+    }
+
+    function copyText(){
+        
+        var texto=document.getElementById("msgResponse").textContent;
+        document.getElementById("copyB").value="COPIADO";
+        
+        console.log(texto);
+
+        navigator.clipboard.writeText(texto);
     }
 
    
