@@ -4,20 +4,27 @@
     height: 100%;
     background: #F3F5FC;
    
+   
 }
 
 .myPopUp{
-    visibility: hidden;
+    display: inline-block;
+        transition: opacity 500ms;
     
-    transition: opacity 500ms;
-    height: 40%; 
+    
 }
 .pop {
-    position:relative;
-    top: 10%;
+    z-index: 1000;
+    
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
     margin: auto;
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    height:10%;
     background: #FFFFFF;
 
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.397);
@@ -28,22 +35,24 @@
 }
 
 .pop p{ 
-    right: 0;
+    position: absolute;
     left: 0;
-    top: 10%;
-    
+    right: 0;
+   
+    margin: auto;
+    top: 25%;
     text-align: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 90%;
     line-height: 100%;
     color: #0A3871; 
 }
 
 .pop .close{
     position: absolute;
-    bottom: 10%;
+    top: 60%;
     width: 40%;
     right: 0;
     left: 0;

@@ -10,7 +10,7 @@
     </header>
     <body>
         <div class="background">
-            <img class="logoA" src="resources/Vector.png">
+            <img class="logoA" src="resources/Vector.png" >
             
             <div class="myPopUp" id="popUp">
                 <div class="pop">
@@ -61,7 +61,7 @@
  
         if(document. getElementById("textToEncrip").value.length == 0) {
             
-            document.getElementById("popUp").style="visibility: visible;";
+            document.getElementById("popUp").style="display:inline-block;";
             
         }else{
             encriptarF();
@@ -76,7 +76,7 @@
     }
     function closePop(){
         
-        document.getElementById("popUp").style="visibility: hidden;";
+        document.getElementById("popUp").style="display:none;";
     }
     function cleanResultBox(){
         document.getElementById("imgRect").style="display:none;";
